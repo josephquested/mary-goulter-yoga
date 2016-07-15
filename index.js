@@ -59,12 +59,22 @@ function setNavActive (nav) {
 
 function renderHome () {
   appendNode('h2', 'home')
-  appendNode('p', 'yo-GA yo-GA yo-GA!')
+  appendNode('p',
+    `I love yoga! I know that life can be difficult -
+    my practice has taught how to face these difficulties
+    and find not only the strength to bear them but also how
+    to face fully all of life’s experiences, from the joyful
+    to the mundane. I know the value of a consistent practice, and I am honoured
+    to share this with you. I found yoga while living in San Francisco,
+    and have been fortunate enough to study with incredibly kind and
+    intelligent teachers. I bring a compassionate and encouraging presence
+    to my classes, and aim to make my teaching relevant and meaningful to everybody.`
+  )
 }
 
 function renderClasses () {
   appendNode('h2', 'classes')
-  appendNode('p', 'here is some information about the classes I teach!')
+  appendNode('p', 'Schedule coming soon!')
 }
 
 function renderContact () {
