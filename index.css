@@ -39,3 +39,29 @@ body {
   text-align: center;
   background-color: GhostWhite;
 }
+
+h1 {
+  font-size: 6.5vw;
+  margin-bottom: 0px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+span, button {
+  padding: 8px 30px;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  background:none;
+  border:none;
+  font-size:1em;
+  outline: none;
+}
+
+button.active {
+  color: blue;
+}

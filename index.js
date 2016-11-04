@@ -6,6 +6,7 @@ for (key in Object.keys(navs)) {
   }
 }
 
+renderHeader()
 changePage({target: {innerHTML: 'home'}})
 
 function changePage (e) {
@@ -46,13 +47,53 @@ function emptyNode (node) {
 }
 
 function setNavActive (nav) {
-  console.log(navs)
   for (key in Object.keys(navs)) {
     if (navs[key] !== undefined) {
       navs[key].classList.remove("active")
     }
   }
-  nav.classList.add("active")
+    nav.classList.add("active")
+}
+
+// header
+
+function renderHeader () {
+  var title = document.getElementById("title")
+  var text = "MARYGOULTERYOGA.com"
+  for (var i = 0; i < text.length; i++) {
+    var h1 = document.createElement("h1")
+    h1.appendChild(document.createTextNode(text[i]))
+    title.appendChild(h1)
+    setOnClick(h1)
+  }
+  setHeaderProperties(title)
+}
+
+function setHeaderProperties (title) {
+  title.onmousemove = () => unFocus()
+  title.onmouseup = () => unFocus()
+  title.style.cursor = "pointer"
+}
+
+function setOnClick (node) {
+  node.onclick = function () {
+    var colors = ["red", "blue", "yellow", "black", "green", "orange", "white", "purple", "brown", 'DarkKhaki', 'DarkSalmon', 'DarkOrchid', 'DarkOrange', 'DeepPink', 'Gold', 'HotPink', 'LightSkyBlue']
+    var color = colors[randomInt(0, colors.length)]
+    while (color == node.style.color) color = colors[randomInt(0, colors.length)]
+    node.style.color = color
+  }
+}
+
+function randomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+var unFocus = function () {
+  if (document.selection) {
+      document.selection.empty()
+  } else {
+      window.getSelection().removeAllRanges()
+  }
 }
 
 // page render
