@@ -7,52 +7,16 @@ for (key in Object.keys(navs)) {
 }
 
 renderHeader()
+renderNav()
+renderPageTitle()
 changePage({target: {innerHTML: 'home'}})
 
-function changePage (e) {
-  emptyNode(app)
-  setNavActive(document.getElementById(e.target.innerHTML))
 
-  switch (e.target.innerHTML) {
-    case "home":
-      renderHome()
-      break
-    case "classes":
-      renderClasses()
-      break
-    case "contact":
-      renderContact()
-      break
-  }
-}
-
-function appendNode (node, text) {
-  var newNode = document.createElement(node)
-  var textNode = document.createTextNode(text)
-  newNode.appendChild(textNode);
-  app.appendChild(newNode);
-}
-
-function appendLink (link, text) {
-  var a = document.createElement('a')
-  a.setAttribute('href', link);
-  a.innerHTML = text;
-  app.appendChild(a);
-}
-
-function emptyNode (node) {
-  while (node.firstChild) {
-    app.removeChild(node.firstChild);
-  }
-}
-
-function setNavActive (nav) {
-  for (key in Object.keys(navs)) {
-    if (navs[key] !== undefined) {
-      navs[key].classList.remove("active")
-    }
-  }
-    nav.classList.add("active")
+function renderNav () {
+  document.getElementById("nav").innerHTML = `
+    <a id="home" href="./index.html" class="nav-button">home</a>
+    <a id="contact" href="./contact.html" class="nav-button">contact</a>
+  `
 }
 
 // header
@@ -111,11 +75,6 @@ function renderHome () {
     intelligent teachers. I bring a compassionate and encouraging presence
     to my classes, and aim to make my teaching relevant and meaningful to everybody.`
   )
-}
-
-function renderClasses () {
-  appendNode('h2', 'classes')
-  appendNode('p', 'Schedule coming soon!')
 }
 
 function renderContact () {

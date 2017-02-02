@@ -20,18 +20,7 @@ div.content {
   font-size:1.5em;
 }
 
-span, button {
-  padding: 10px 20px;
-  display: flex;
-  align-self: center;
-  justify-content: center;
-  background:none;
-  border:none;
-  font-size:1em;
-  outline: none;
-}
-
-button.active {
+a.active {
   color: blue;
 }
 
@@ -51,7 +40,8 @@ h1 {
   user-select: none;
 }
 
-span, button {
+span, a {
+  text-decoration: none;
   padding: 8px 30px;
   display: flex;
   align-self: center;
