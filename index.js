@@ -20,8 +20,10 @@ function renderHeader () {
   for (var i = 0; i < text.length; i++) {
     var h1 = document.createElement("h1")
     h1.appendChild(document.createTextNode(text[i]))
+
     title.appendChild(h1)
     setOnClick(h1)
+    changeColor(h1)
   }
   setHeaderProperties(title)
 }
@@ -33,12 +35,14 @@ function setHeaderProperties (title) {
 }
 
 function setOnClick (node) {
-  node.onclick = function () {
-    var colors = ["red", "blue", "yellow", "black", "green", "orange", "white", "purple", "brown", 'DarkKhaki', 'DarkSalmon', 'DarkOrchid', 'DarkOrange', 'DeepPink', 'Gold', 'HotPink', 'LightSkyBlue']
-    var color = colors[randomInt(0, colors.length)]
-    while (color == node.style.color) color = colors[randomInt(0, colors.length)]
-    node.style.color = color
-  }
+  node.onclick = changeColor(node)
+}
+
+function changeColor (node) {
+  var colors = ["red", "blue", "yellow", "black", "green", "orange", "white", "purple", "brown", 'DarkKhaki', 'DarkSalmon', 'DarkOrchid', 'DarkOrange', 'DeepPink', 'Gold', 'HotPink', 'LightSkyBlue']
+  var color = colors[randomInt(0, colors.length)]
+  while (color == node.style.color) color = colors[randomInt(0, colors.length)]
+  node.style.color = color
 }
 
 function randomInt(min, max) {
