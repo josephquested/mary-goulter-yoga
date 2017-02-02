@@ -4,6 +4,8 @@ function init () {
   renderPageTitle()
 }
 
+window.history.pushState({}, "/robots", "/robots")
+
 function renderNav () {
   document.getElementById("nav").innerHTML = `
     <a id="home" href="http://marygoulteryoga.com/" class="nav-button">home</a>
