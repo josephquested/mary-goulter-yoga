@@ -1,21 +1,13 @@
-var app = document.getElementById('app')
-var navs = document.getElementsByClassName('nav-button')
-for (key in Object.keys(navs)) {
-  if (navs[key] !== undefined) {
-    navs[key].addEventListener("click", changePage)
-  }
+function init () {
+  renderHeader()
+  renderNav()
+  renderPageTitle()
 }
-
-renderHeader()
-renderNav()
-renderPageTitle()
-changePage({target: {innerHTML: 'home'}})
-
 
 function renderNav () {
   document.getElementById("nav").innerHTML = `
-    <a id="home" href="./index.html" class="nav-button">home</a>
-    <a id="contact" href="./contact.html" class="nav-button">contact</a>
+    <a id="home" href="http://marygoulteryoga.com/" class="nav-button">home</a>
+    <a id="contact" href="http://marygoulteryoga.com/contact" class="nav-button">contact</a>
   `
 }
 
@@ -60,25 +52,6 @@ var unFocus = function () {
   }
 }
 
-// page render
+// init
 
-function renderHome () {
-  appendNode('h2', 'home')
-  appendNode('p',
-    `I love yoga! I know that life can be difficult -
-    my practice has taught how to face these difficulties
-    and find not only the strength to bear them but also how
-    to face fully all of life’s experiences, from the joyful
-    to the mundane. I know the value of a consistent practice, and I am honoured
-    to share this with you. I found yoga while living in San Francisco,
-    and have been fortunate enough to study with incredibly kind and
-    intelligent teachers. I bring a compassionate and encouraging presence
-    to my classes, and aim to make my teaching relevant and meaningful to everybody.`
-  )
-}
-
-function renderContact () {
-  appendNode('h2', 'contact')
-  appendNode('p', '021 0244 2687')
-  appendLink('mailto:marygoulteryoga@gmail.com', 'marygoulteryoga@gmail.com')
-}
+init()
