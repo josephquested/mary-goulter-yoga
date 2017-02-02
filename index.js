@@ -23,7 +23,7 @@ function renderHeader () {
 
     title.appendChild(h1)
     setOnClick(h1)
-    changeColor(h1)
+    // changeColor(h1)
   }
   setHeaderProperties(title)
 }
@@ -35,11 +35,12 @@ function setHeaderProperties (title) {
 }
 
 function setOnClick (node) {
-  node.onclick = changeColor(node)
+  node.onclick = () => changeColor(node)
 }
 
 function changeColor (node) {
-  var colors = ["red", "blue", "yellow", "black", "green", "orange", "white", "purple", "brown", 'DarkKhaki', 'DarkSalmon', 'DarkOrchid', 'DarkOrange', 'DeepPink', 'Gold', 'HotPink', 'LightSkyBlue']
+  // var colors = ["red", "blue", "yellow", "black", "green", "orange", "white", "purple", "brown", 'DarkKhaki', 'DarkSalmon', 'DarkOrchid', 'DarkOrange', 'DeepPink', 'Gold', 'HotPink', 'LightSkyBlue']
+  var colors = ['#F7963F', '#BCE2FB', '#444534', '#B5894E', '#FDF269', 'GhostWhite']
   var color = colors[randomInt(0, colors.length)]
   while (color == node.style.color) color = colors[randomInt(0, colors.length)]
   node.style.color = color

@@ -13,12 +13,17 @@ p {
 }
 
 h2 {
-  font-size: font-size:2.5em;
+  font-size: font-size: 2.5em;
 }
 
 h1 {
-  font-size: 4.5vw;
+  /*font-family: 'Lato', sans-serif;*/
+  font-family: 'Montserrat', sans-serif;
+  color: DimGrey;
+  font-size: 3.5vw;
   margin-bottom: 0px;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -48,6 +53,8 @@ span, a {
   position: absolute;
   left: 0px;
   right: 0px;
+  margin-left: 33%;
+  padding-bottom: 6%;
 }
 
 #logo {
