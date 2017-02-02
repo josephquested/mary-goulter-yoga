@@ -1,5 +1,5 @@
 * {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -17,7 +17,6 @@ h2 {
 }
 
 h1 {
-  /*font-family: 'Lato', sans-serif;*/
   font-family: 'Montserrat', sans-serif;
   color: DimGrey;
   font-size: 3.5vw;
