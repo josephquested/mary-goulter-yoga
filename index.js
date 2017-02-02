@@ -4,7 +4,7 @@ function init () {
   renderPageTitle()
 }
 
-window.history.pushState({}, "/robots", "/robots")
+// window.history.pushState({}, "/robots", "/robots")
 
 function renderNav () {
   document.getElementById("nav").innerHTML = `
