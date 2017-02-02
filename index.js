@@ -5,13 +5,13 @@ function init () {
 
 function renderNav () {
   document.getElementById("nav").innerHTML = `
-    <a id="home" href="./index.html" class="nav-button">home</a>
-    <a id="contact" href="./contact.html" class="nav-button">contact</a>
+    <a id="home" href="http://marygoulteryoga.com/" class="nav-button">home</a>
+    <a id="contact" href="http://marygoulteryoga.com/contact" class="nav-button">contact</a>
   `
 }
-// <a id="home" href="http://marygoulteryoga.com/" class="nav-button">home</a>
-// <a id="contact" href="http://marygoulteryoga.com/contact" class="nav-button">contact</a>
 
+// <a id="home" href="./index.html" class="nav-button">home</a>
+// <a id="contact" href="./contact.html" class="nav-button">contact</a>
 // header
 
 function renderHeader () {
